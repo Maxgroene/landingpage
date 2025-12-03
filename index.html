@@ -3,43 +3,38 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Meine einfache Website</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #f2f2f2;
-    }
-    header {
-      background: #4a90e2;
-      color: white;
-      padding: 20px;
-      text-align: center;
-    }
-    main {
-      padding: 20px;
-    }
-    footer {
-      background: #ddd;
-      text-align: center;
-      padding: 10px;
-      margin-top: 20px;
-    }
-  </style>
+  <title>Landing Page</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header>
-    <h1>Willkommen auf meiner Website</h1>
+    <h1>Meine Links</h1>
+    <p>Alle wichtigen Seiten auf einen Blick</p>
   </header>
 
   <main>
-    <h2>Über mich</h2>
-    <p>Das ist eine einfache HTML-Seite als Beispiel.</p>
+    <div id="links-container" class="links-grid"></div>
   </main>
 
-  <footer>
-    <p>&copy; 2025 Meine Website</p>
-  </footer>
+  <script>
+    fetch('sites.json')
+      .then(response => response.json())
+      .then(data => {
+        const container = document.getElementById('links-container');
+        data.sites.forEach(site => {
+          const card = document.createElement('a');
+          card.href = site.link;
+          card.className = 'card';
+          card.target = '_blank';
+
+          card.innerHTML = `
+            <img src="${site.icon}" alt="icon" class="icon" />
+            <span>${site.name}</span>
+          `;
+
+          container.appendChild(card);
+        });
+      });
+  </script>
 </body>
 </html>

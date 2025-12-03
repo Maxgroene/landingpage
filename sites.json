@@ -1,0 +1,34 @@
+{
+  "sites": [
+    {
+      "name": "Google",
+      "link": "https://www.google.com",
+      "icon": "https://www.google.com/favicon.ico"
+    },
+        {
+      "name": "Intranet FH",
+      "link": "https://intranet.hs-osnabrueck.de/",
+      "icon": "https://intranet.hs-osnabrueck.de/_assets/23204c9ea37a48984dce020025731aa8/Icons/hsos-favicon.png"
+    },
+        {
+      "name": "Bibliothek FH",
+      "link": "https://research.ebsco.com/c/u3s5ps/search",
+      "icon": "https://intranet.hs-osnabrueck.de/_assets/23204c9ea37a48984dce020025731aa8/Icons/hsos-favicon.png"
+    },
+            {
+      "name": "Zeitwart FH",
+      "link": "https://zeitwart.hs-osnabrueck.de/kalender_uebersicht/bibliothek-lingen",
+      "icon": "https://zeitwart.hs-osnabrueck.de/kalender_uebersicht/bibliothek-lingen"
+    },
+                {
+      "name": "ChatGPT",
+      "link": "https://chatgpt.com/",
+      "icon": "https://cdn.oaistatic.com/assets/favicon-eex17e9e.ico"
+    },
+    {
+      "name": "Springer Link",
+      "link": "https://link.springer.com/",
+      "icon": "https://link.springer.com/oscar-static/img/favicons/darwin/apple-touch-icon-6ef0829b9c.png"
+    }
+  ]
+}
